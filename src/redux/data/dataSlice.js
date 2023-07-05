@@ -1,28 +1,27 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
-const apiKey = import.meta.env.VITE_FMP_API_KEY;
-const bulkUrl = `https://financialmodelingprep.com/api/v3/quote/AAPL,TWTR,TSLA,NFLX,MSFT,GOOG,NVDA,INTC,ADBE,TWTR,AMD?apikey=${apiKey}`;
+const countries = "https://restcountries.com/v3.1/all";
 
 const initialState = {
-  stockData: [],
+  countries: [],
 };
 
 export const fetchData = createAsyncThunk(
-  'data/fetchData',
+  "data/fetchData",
 
   async () => {
     try {
-      const response = await axios.get(bulkUrl);
+      const response = await axios.get(countries);
       return response.data;
     } catch (error) {
-      return error;
+      return error.message;
     }
-  },
+  }
 );
 
 const dataSlice = createSlice({
-  name: 'stockData',
+  name: "stockData",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -34,8 +33,8 @@ const dataSlice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = false;
         state.error = false;
-        state.stockData = action.payload;
-        console.log(action.payload);
+        state.countries = action.payload;
+        console.log(state.countries);
       })
       .addCase(fetchData.rejected, (state) => {
         state.error = true;
