@@ -2,10 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const apiKey = import.meta.env.VITE_FMP_API_KEY;
-const url = `https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=${apiKey}`;
+const bulkUrl = `https://financialmodelingprep.com/api/v3/quote/AAPL,TWTR,TSLA,NFLX,MSFT,GOOG?apikey=${apiKey}`;
 
 const initialState = {
-  data: [],
+  companyStockData: [],
 };
 
 export const fetchData = createAsyncThunk(
@@ -13,7 +13,7 @@ export const fetchData = createAsyncThunk(
 
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(url);
+      const response = await axios.get(bulkUrl);
       return response.data;
     } catch (error) {
       return error;
@@ -34,7 +34,7 @@ const dataSlice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = false;
         state.error = false;
-        state.data = action.payload;
+        state.companyStockData = action.payload;
         console.log(action.payload);
       })
       .addCase(fetchData.rejected, (state) => {
