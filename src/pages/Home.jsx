@@ -1,9 +1,9 @@
 import Countries from '../components/Countries';
-import Filter from '../components/Filter';
+// import Filter from '../components/Filter';
 
 const Home = () => (
   <div>
-    {/*<Filter/>*/}
+    {/* <Filter/> */}
     <Countries />
   </div>
 );

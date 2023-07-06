@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import dataReducer from './data/dataSlice';
+import countriesReducer from './countries/countriesSlice';
 
 const store = configureStore({
   reducer: {
-    stockData: dataReducer,
+    countries: countriesReducer,
   },
 });
 

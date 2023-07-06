@@ -6,16 +6,19 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import { fetchData } from './redux/data/dataSlice';
+import { fetchCountries } from './redux/countries/countriesSlice';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
-import Details from './pages/Details';
+import DetailsLayout from './layouts/DetailsLayout';
+import SingleCountryDetails from './components/SingleCountryDetails';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="details" element={<Details />} />
+      <Route path="country" element={<DetailsLayout />}>
+        <Route path=":name" element={<SingleCountryDetails />} />
+      </Route>
     </Route>,
   ),
 );
@@ -24,7 +27,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(fetchCountries());
   }, [dispatch]);
 
   return (

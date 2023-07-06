@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types'
-const Filter = props => {
-  return (
-    <div>Filter</div>
-  )
-}
-Filter.propTypes = {}
-export default Filter
+import PropTypes from 'prop-types';
+
+const Filter = (props) => (
+  <div>Filter</div>
+);
+Filter.propTypes = {};
+export default Filter;
