@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import SingleDetail from "./SingleDetail";
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import SingleDetail from './SingleDetail';
 
 const SingleCountryDetails = () => {
   const { name } = useParams();
@@ -16,11 +16,11 @@ const SingleCountryDetails = () => {
     population,
     landlocked,
     area,
-    flag
+    flag,
   } = country;
 
   return (
-    <ul>
+    <ul className="bg-primary">
       <SingleDetail item="Flag" value={flag} />
       <SingleDetail item="Capital" value={capital} />
       <SingleDetail item="Subregion" value={subregion} />
@@ -28,7 +28,7 @@ const SingleCountryDetails = () => {
       <SingleDetail item="Area" value={area} />
       <SingleDetail
         item="Landlocked"
-        value={landlocked ? "Yes" : "No"}
+        value={landlocked ? 'Yes' : 'No'}
       />
     </ul>
   );

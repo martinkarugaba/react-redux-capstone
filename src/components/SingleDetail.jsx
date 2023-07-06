@@ -1,14 +1,16 @@
-import PropTypes from 'prop-types'
-const SingleDetail = ({item, value}) => {
-  return (
-    <li className="flex border justify-between items-center px-4 py-6">
-      <span className="text-xl font-medium">{item}</span>
-      <span className="text-lg font-normal">{value}</span>
-    </li>
-  );
-}
+import PropTypes from 'prop-types';
+
+const SingleDetail = ({ item, value }) => (
+  <li className="flex text-white odd:bg-secondary justify-between items-center px-4 py-6">
+    <span className="text-lg font-bold">{item}</span>
+    <span className="text-xg font-medium">{value}</span>
+  </li>
+);
 SingleDetail.propTypes = {
   item: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+  ]).isRequired,
 };
-export default SingleDetail
+export default SingleDetail;

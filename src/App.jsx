@@ -10,7 +10,7 @@ import { fetchCountries } from './redux/countries/countriesSlice';
 import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import DetailsLayout from './layouts/DetailsLayout';
-import SingleCountryDetails from './components/SingleCountryDetails';
+import SingleCountryDetails from './components/CountryDetails';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="country" element={<DetailsLayout />}>
         <Route path=":name" element={<SingleCountryDetails />} />
       </Route>
-    </Route>
+    </Route>,
   ),
 );
 

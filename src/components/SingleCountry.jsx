@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const SingleCountry = ({ name, area }) => (
   <Link
     to={`country/${name}`}
-    className="shadow border bg-slate-100 h-[170px] box-border basis-1/2 flex flex-col justify-end items-end p-4"
+    className="border-gray-900 text-white bg-primary h-[170px] box-border basis-1/2 flex flex-col justify-end items-end p-4"
   >
-    <h3 className="text-lg text-right font-bold uppercase">{name}</h3>
-    <p className="text-base">
+    <h3 className="text-xl text-right font-extrabold uppercase">{name}</h3>
+    <p className="text-base font-medium">
       {area}
       {' '}
       km

@@ -4,11 +4,11 @@ const DetailsLayout = () => {
   const { name } = useParams();
 
   return (
-    <div>
-      <div className="bg-red-300">
+    <div className="bg-primary">
+      <div className="px-4 py-1 text-white text-xl font-medium">
         <Link to="/">Back</Link>
       </div>
-      <div className="h-[150px] w-full shadow flex justify-end items-center py-0 p-4">
+      <div className="h-[150px] text-white w-full shadow flex justify-end items-center py-0 p-4">
         <h2 className="text-3xl text-right font-bold uppercase">
           {name}
         </h2>
