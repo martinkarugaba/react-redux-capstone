@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SingleCountry = ({ name, area }) => (
   <Link
     to={`country/${name}`}
-    className="border-gray-900 text-white bg-primary h-[170px] box-border basis-1/2 flex flex-col justify-end items-end p-4"
+    className="shadow text-white bg-primary h-[170px] box-border basis-1/2 flex flex-col justify-end items-end p-4"
   >
     <h3 className="text-xl text-right font-extrabold uppercase">{name}</h3>
     <p className="text-base font-medium">

@@ -11,4 +11,5 @@ const Countries = () => {
     </div>
   );
 };
+
 export default Countries;

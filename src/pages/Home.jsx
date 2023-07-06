@@ -1,9 +1,9 @@
 import Countries from '../components/Countries';
-// import Filter from '../components/Filter';
+ import SearchForm from '../components/SearchForm';
 
 const Home = () => (
   <div>
-    {/* <Filter/> */}
+    <SearchForm />
     <Countries />
   </div>
 );
