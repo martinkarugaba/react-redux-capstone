@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="country" element={<DetailsLayout />}>
         <Route path=":name" element={<SingleCountryDetails />} />
       </Route>
-    </Route>,
+    </Route>
   ),
 );
 
