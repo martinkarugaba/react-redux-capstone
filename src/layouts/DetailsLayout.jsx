@@ -5,7 +5,7 @@ const DetailsLayout = () => {
 
   return (
     <div className="bg-primary">
-      <div className="px-4 py-1 text-white text-xl font-medium">
+      <div className="px-4 py-1 text-white text-sm font-bold uppercase">
         <Link to="/">Back</Link>
       </div>
       <div className="h-[150px] text-white w-full shadow flex justify-end items-center py-0 p-4">

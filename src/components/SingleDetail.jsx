@@ -8,6 +8,10 @@ const SingleDetail = ({ item, value }) => (
 );
 SingleDetail.propTypes = {
   item: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  value: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.element,
+  ]),
 };
 export default SingleDetail;
