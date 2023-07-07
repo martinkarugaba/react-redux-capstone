@@ -11,7 +11,8 @@ SingleDetail.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
+    PropTypes.symbol,
     PropTypes.element,
-  ]).isRequired,
+  ]),
 };
 export default SingleDetail;

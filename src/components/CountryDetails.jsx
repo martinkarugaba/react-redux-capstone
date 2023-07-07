@@ -16,12 +16,10 @@ const CountryDetails = () => {
     population,
     landlocked,
     area,
-    flag,
   } = country;
 
   return (
     <ul className="bg-primary">
-      <SingleDetail item="Flag" value={flag} />
       <SingleDetail item="Capital" value={capital} />
       <SingleDetail item="Subregion" value={subregion} />
       <SingleDetail item="Population" value={population} />
