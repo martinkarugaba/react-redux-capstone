@@ -35,6 +35,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Instructional video ](#-instructional-video-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -72,7 +73,6 @@ After you're finished please remove all the comments and instructions!
 - **[Show_a_list_of_countries]**
 - **[Show_single_country_details]**
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -81,6 +81,12 @@ After you're finished please remove all the comments and instructions!
 
   
 - [Live Demo Link(render)](https://mycountry23.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Instructional video <a name="instructional-video"></a>
+  
+- [Instructional video](https://www.loom.com/share/f2efee573c40479d9eaade56939a28d8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
