@@ -13,6 +13,6 @@ SingleDetail.propTypes = {
     PropTypes.string,
     PropTypes.symbol,
     PropTypes.element,
-  ]),
+  ]).isRequired,
 };
 export default SingleDetail;
