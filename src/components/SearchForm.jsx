@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const SearchForm = ({ query, setQuery }) => (
-  <div className="border-black-300 bg-gray-300 px-4 py-3">
+  <div className="border-black-300 bg-rose-400 px-4 py-3">
     <form
       data-testid="search-form"
       className="flex gap-x-0 justify-between items-center"
@@ -11,7 +11,7 @@ const SearchForm = ({ query, setQuery }) => (
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="border rounded-md flex-1 h-full p-2 px-3"
-        placeholder="Search country"
+        placeholder="Search by Country Name"
         data-testid="search-input"
       />
       <button
