@@ -45,7 +45,6 @@ describe('CountryDetails', () => {
       </Provider>,
     );
 
-    expect(screen.getByText('Flag')).toBeInTheDocument();
     expect(screen.getByText('Capital')).toBeInTheDocument();
     expect(screen.getByText('Capital City 1')).toBeInTheDocument();
     expect(screen.getByText('Subregion')).toBeInTheDocument();

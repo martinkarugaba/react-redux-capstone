@@ -42,6 +42,7 @@ const dataSlice = createSlice({
           ...item,
           id: uuidv4(),
         }));
+        console.log(action.payload);
       })
       .addCase(fetchCountries.rejected, (state) => {
         state.loading = false;
