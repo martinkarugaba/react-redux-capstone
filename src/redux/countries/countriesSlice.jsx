@@ -1,29 +1,32 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
+/* eslint-disable no-param-reassign */
 
-const countries = "https://restcountries.com/v3.1/all";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+
+const countries = 'https://restcountries.com/v3.1/all';
 
 const initialState = {
   countries: [],
   country: {},
+  loading: false,
+  error: false,
 };
 
 export const fetchCountries = createAsyncThunk(
-  "countries/fetchCountries",
-
+  'countries/fetchCountries',
   async () => {
     try {
       const response = await axios.get(countries);
       return response.data;
     } catch (error) {
-      return error.message;
+      throw new Error(error.message);
     }
-  }
+  },
 );
 
 const dataSlice = createSlice({
-  name: "countries",
+  name: 'countries',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -41,12 +44,10 @@ const dataSlice = createSlice({
         }));
       })
       .addCase(fetchCountries.rejected, (state) => {
+        state.loading = false;
         state.error = true;
-        state.error = false;
       });
   },
 });
-
-export const {} = dataSlice.actions;
 
 export default dataSlice.reducer;

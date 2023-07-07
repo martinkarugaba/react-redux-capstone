@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const SingleDetail = ({ item, value }) => (
   <li className="flex text-white odd:bg-secondary justify-between items-center px-4 py-6">
@@ -12,6 +12,6 @@ SingleDetail.propTypes = {
     PropTypes.number,
     PropTypes.string,
     PropTypes.element,
-  ]),
+  ]).isRequired,
 };
 export default SingleDetail;
