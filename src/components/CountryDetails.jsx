@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import SingleDetail from './SingleDetail';
 
-const SingleCountryDetails = () => {
+const CountryDetails = () => {
   const { name } = useParams();
   const { countries } = useSelector((store) => store.countries);
 
@@ -34,4 +34,4 @@ const SingleCountryDetails = () => {
   );
 };
 
-export default SingleCountryDetails;
+export default CountryDetails;

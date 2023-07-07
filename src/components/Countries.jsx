@@ -3,6 +3,7 @@ import SingleCountry from "./SingleCountry";
 import { useState } from "react";
 import SearchForm from "./SearchForm";
 
+
 const Countries = () => {
   const { countries } = useSelector((store) => store.countries);
   const [query, setQuery] = useState('')
