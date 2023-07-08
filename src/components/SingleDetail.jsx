@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const SingleDetail = ({ item, value }) => (
-  <li className="flex text-white odd:bg-secondary justify-between items-center px-4 py-6">
+  <li className="flex text-white odd:bg-secondary justify-between items-center px-4 py-8">
     <span className="text-lg font-bold">{item}</span>
     <span className="text-xg font-medium">{value}</span>
   </li>
