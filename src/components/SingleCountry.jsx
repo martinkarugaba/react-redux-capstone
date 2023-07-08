@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import right from "../assets/right.png";
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import right from '../assets/right.png';
 
 const SingleCountry = ({ name, area }) => (
   <Link
@@ -17,7 +17,9 @@ const SingleCountry = ({ name, area }) => (
         {name}
       </h3>
       <p className="text-base font-medium">
-        {area} km
+        {area}
+        {' '}
+        km
         <sup>2</sup>
       </p>
     </div>
